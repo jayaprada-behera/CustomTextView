@@ -7,8 +7,10 @@
 //
 
 #import "WAViewController.h"
+#import <CoreText/CoreText.h>
 
 #define FONT_SIZE    21.f
+#define MINIMUM_FONT_SIZE  16.f
 
 #define NSLineSeparatorCharacter           0x2028
 @interface WAViewController ()<UITextViewDelegate>
@@ -32,15 +34,16 @@
     textView_.textContainer.maximumNumberOfLines = 9;
     textView_.backgroundColor = [UIColor greenColor];
     textView_.textContainer.lineBreakMode = NSLineBreakByWordWrapping;
-    
+
     [self.view addSubview:textView_];
     
 }
 
 - (BOOL)textView:(UITextView *)textView shouldChangeTextInRange:(NSRange)range replacementText:(NSString *)text
 {
+
     UITextPosition *beginning = textView.beginningOfDocument; //Error=: request for member 'beginningOfDocument' in something not a structure or union
-    
+
     UITextPosition *start = [textView positionFromPosition:beginning offset:range.location];
     UITextPosition *end = [textView positionFromPosition:start offset:range.length];
     UITextRange *textRange = [textView textRangeFromPosition:start toPosition:end];
@@ -54,7 +57,6 @@
         
         if (cursorPosition.x >170.f && cursorPosition.y > 100 && cursorPosition.y <160) {
             if (font < FONT_SIZE) {
-                NSLog(@"delete,font increased");
                 font = textView.font.pointSize +2;
                 textView.font = [UIFont systemFontOfSize:font];
             }
@@ -63,17 +65,14 @@
         if (cursorPosition.x >170.f && cursorPosition.y > 150 ) {//at most end point of last line
             //decrease the font size  ,if deleting some text that come to certain posotion
             if (font < FONT_SIZE) {
-                NSLog(@"delete,font decreased");
+                if (font < MINIMUM_FONT_SIZE && font >  0) {
+                    return NO;
+                }
                 font = textView.font.pointSize - 2;
                 textView.font = [UIFont systemFontOfSize:font];
             }
         }
     }
-    //    if (cursorPosition.x == 0) {
-    //        textView.selectedRange = NSMakeRange(textView.text.length -0, 0);
-    ////       textView_.scrollEnabled = NO;
-    //        return NO;
-    //    }
     return YES ;
     
 }

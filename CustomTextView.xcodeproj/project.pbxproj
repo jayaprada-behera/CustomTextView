@@ -21,7 +21,6 @@
 		AF62CCF518BC9E4C00759724 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AF62CCD718BC9E4C00759724 /* UIKit.framework */; };
 		AF62CCFD18BC9E4C00759724 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = AF62CCFB18BC9E4C00759724 /* InfoPlist.strings */; };
 		AF62CCFF18BC9E4C00759724 /* CustomTextViewTests.m in Sources */ = {isa = PBXBuildFile; fileRef = AF62CCFE18BC9E4C00759724 /* CustomTextViewTests.m */; };
-		AF62CD0A18BC9E7D00759724 /* WACustomTextView.m in Sources */ = {isa = PBXBuildFile; fileRef = AF62CD0918BC9E7D00759724 /* WACustomTextView.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -54,8 +53,6 @@
 		AF62CCFA18BC9E4C00759724 /* CustomTextViewTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "CustomTextViewTests-Info.plist"; sourceTree = "<group>"; };
 		AF62CCFC18BC9E4C00759724 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		AF62CCFE18BC9E4C00759724 /* CustomTextViewTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CustomTextViewTests.m; sourceTree = "<group>"; };
-		AF62CD0818BC9E7D00759724 /* WACustomTextView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WACustomTextView.h; sourceTree = "<group>"; };
-		AF62CD0918BC9E7D00759724 /* WACustomTextView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WACustomTextView.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -120,8 +117,6 @@
 				AF62CCE518BC9E4C00759724 /* Main.storyboard */,
 				AF62CCE818BC9E4C00759724 /* WAViewController.h */,
 				AF62CCE918BC9E4C00759724 /* WAViewController.m */,
-				AF62CD0818BC9E7D00759724 /* WACustomTextView.h */,
-				AF62CD0918BC9E7D00759724 /* WACustomTextView.m */,
 				AF62CCEB18BC9E4C00759724 /* Images.xcassets */,
 				AF62CCDA18BC9E4C00759724 /* Supporting Files */,
 			);
@@ -255,7 +250,6 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				AF62CD0A18BC9E7D00759724 /* WACustomTextView.m in Sources */,
 				AF62CCEA18BC9E4C00759724 /* WAViewController.m in Sources */,
 				AF62CCE418BC9E4C00759724 /* WAAppDelegate.m in Sources */,
 				AF62CCE018BC9E4C00759724 /* main.m in Sources */,
